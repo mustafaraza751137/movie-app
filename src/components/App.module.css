@@ -1,0 +1,16 @@
+.App{
+    background-color: #eee;
+}
+.main{
+    margin: 10px auto;
+    width: 70%;
+}
+.tabs{
+    display: flex;
+}
+.tab{
+    background-color: white;
+    font-size: large;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
