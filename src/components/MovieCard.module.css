@@ -30,10 +30,13 @@
     display: flex;
     justify-content: space-between;
 }
-.favouriteBtn{
+.Btn{
     background-color: dodgerblue;
     color: white;
     font-size: 16px;
     padding: 5px 10px;
     border: none;
+}
+.UnfavouriteBtn{
+    background-color: crimson;
 }
