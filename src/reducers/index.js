@@ -17,6 +17,11 @@ export default function movies (state = initialMoviesState, action){
                 favourites: [action.movie, ...state.favourites]
             };
         case REMOVE_FROM_FAVOURITES:
+            // const index = state.favourites.indexOf(action.movie);
+            // console.log(index);
+            state.favourites = state.favourites.filter(function(movie){
+                return movie !== action.movie
+            });
             return {
                 ...state,
                 favourites: [...state.favourites]
