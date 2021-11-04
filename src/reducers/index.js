@@ -1,8 +1,9 @@
-import { ADD_MOVIES, ADD_TO_FAVOURITES, REMOVE_FROM_FAVOURITES } from '../actions';
+import { ADD_MOVIES, ADD_TO_FAVOURITES, REMOVE_FROM_FAVOURITES, SET_SHOW_FAVOURITES } from '../actions';
 
 const initialMoviesState = {
     list: [],
-    favourites: []
+    favourites: [],
+    showFavourites: false
 }
 export default function movies (state = initialMoviesState, action){
     switch(action.type){
@@ -17,15 +18,18 @@ export default function movies (state = initialMoviesState, action){
                 favourites: [action.movie, ...state.favourites]
             };
         case REMOVE_FROM_FAVOURITES:
-            // const index = state.favourites.indexOf(action.movie);
-            // console.log(index);
-            state.favourites = state.favourites.filter(function(movie){
-                return movie !== action.movie
-            });
+            const filteredArray = state.favourites.filter(
+                movie => movie.Title !== action.movie.Title
+            );
             return {
                 ...state,
-                favourites: [...state.favourites]
+                favourites: filteredArray
             };
+        case SET_SHOW_FAVOURITES:
+            return {
+                ...state,
+                showFavourites: action.val
+            }
         default:
             return state;
     }
