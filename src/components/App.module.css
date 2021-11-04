@@ -13,6 +13,7 @@
     font-size: large;
     padding: 5px 10px;
     margin-right: 10px;
+    cursor: pointer;
 }
 .activeTab{
     background-color: dodgerblue;
