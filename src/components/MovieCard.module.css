@@ -40,3 +40,12 @@
 .UnfavouriteBtn{
     background-color: crimson;
 }
+
+@media screen and (max-width: 400px) {
+    .left{
+        width: 50%;
+    }
+    .plot{
+        height: auto;
+    }
+}

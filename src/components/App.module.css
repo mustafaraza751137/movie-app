@@ -18,3 +18,9 @@
 .activeTab{
     background-color: dodgerblue;
 }
+
+@media screen and (max-width: 400px) {
+    .main{
+        width: 90%;
+    }
+}
